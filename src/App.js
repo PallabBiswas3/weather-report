@@ -17,7 +17,6 @@ function App() {
     try {
       const update = await fetch(`${apiURL}&q=${city}&appid=${apiKey}`);
       const data = await update.json();
-      console.log(data)
       setWeatherData(data);
     } catch (error) {
       console.error('Error fetching weather data:', error);
